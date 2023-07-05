@@ -1,6 +1,10 @@
 function ColorMyPencils(color)
-	color = color or "rose-pine-main"
+    require('onedark').setup {
+        style = 'darker'
+    }
+	color = color or "tokyonight-night"
 	vim.cmd.colorscheme(color)
 end	
 
 ColorMyPencils()
+

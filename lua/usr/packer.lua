@@ -36,24 +36,51 @@ return require('packer').startup(function(use)
   }
 
   use {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v2.x',
-	  requires = {
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},             -- Required
-		  {                                      -- Optional
-		  'williamboman/mason.nvim',
-		  run = function()
-			  pcall(vim.cmd, 'MasonUpdate')
-		  end,
-	  },
-	  {'williamboman/mason-lspconfig.nvim'}, -- Optional
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v2.x',
+      requires = {
+          -- LSP Support
+          {'neovim/nvim-lspconfig'},             -- Required
+          {                                      -- Optional
+          'williamboman/mason.nvim',
+          run = function()
+              pcall(vim.cmd, 'MasonUpdate')
+          end,
+      },
+      {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-	  -- Autocompletion
-	  {'hrsh7th/nvim-cmp'},     -- Required
-	  {'hrsh7th/cmp-nvim-lsp'}, -- Required
-	  {'L3MON4D3/LuaSnip'},     -- Required
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},     -- Required
+      {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'L3MON4D3/LuaSnip'},     -- Required
   }
-}
+  }
 
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
+    
+  use { 'tpope/vim-fugitive' }
+    
+  use { 'embark-theme/vim', as = 'embark' }
+
+  use { 'navarasu/onedark.nvim'}
+
+  use { 'sainnhe/gruvbox-material' }
+
+
+  use { 'luisiacc/gruvbox-baby' }
+
+  use { 'airblade/vim-gitgutter' }
+
+  use { 'folke/tokyonight.nvim' }
+
+  use { 'APZelos/blamer.nvim' }
+
+
+  use { 'BurntSushi/ripgrep' }
 end)
+
