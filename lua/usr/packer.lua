@@ -80,6 +80,7 @@ return require('packer').startup(function(use)
 
   use { 'APZelos/blamer.nvim' }
 
+  use { 'marko-cerovac/material.nvim' }
 
   use { 'BurntSushi/ripgrep' }
 end)
