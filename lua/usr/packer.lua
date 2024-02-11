@@ -83,5 +83,24 @@ return require('packer').startup(function(use)
   use { 'marko-cerovac/material.nvim' }
 
   use { 'BurntSushi/ripgrep' }
+
+  use { 'rebelot/kanagawa.nvim' } 
+
+  use { 'lervag/vimtex' }
+
+  use { 'godlygeek/tabular' }
+
+  use { 'elzr/vim-json' }
+
+  use { 'plasticboy/vim-markdown' }
+
+   use({
+       "iamcco/markdown-preview.nvim",
+       run = function() vim.fn["mkdp#util#install"]() end,
+   })
+
+   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+
 end)
 
