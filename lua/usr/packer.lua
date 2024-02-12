@@ -88,12 +88,6 @@ return require('packer').startup(function(use)
 
   use { 'lervag/vimtex' }
 
-  use { 'godlygeek/tabular' }
-
-  use { 'elzr/vim-json' }
-
-  use { 'plasticboy/vim-markdown' }
-
    use({
        "iamcco/markdown-preview.nvim",
        run = function() vim.fn["mkdp#util#install"]() end,
