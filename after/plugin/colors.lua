@@ -13,9 +13,12 @@ function ColorMyPencils(color)
         terminalColors = true,       -- define vim.g.terminal_color_{0,17}
         theme = "wave",              -- Load "wave" theme when 'background' option is not set
     }
-color = color or "kanagawa"
-vim.cmd.colorscheme(color)
-end	
+    require('noirbuddy').setup {
+      preset = 'miami-nights',
+    }
+    color = color or "base16-tomorrow-night"
+    vim.cmd.colorscheme(color)
+end
 
 ColorMyPencils()
 
