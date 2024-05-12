@@ -85,4 +85,5 @@ return require('packer').startup(function(use)
     use {'nyoom-engineering/oxocarbon.nvim'}
     use { 'kvrohit/rasmus.nvim' }
     use { 'p00f/alabaster.nvim' }
+    use { 'jaredgorski/Mies.vim' }
 end)
