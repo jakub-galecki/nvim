@@ -86,4 +86,6 @@ return require('packer').startup(function(use)
     use { 'kvrohit/rasmus.nvim' }
     use { 'p00f/alabaster.nvim' }
     use { 'jaredgorski/Mies.vim' }
+    use { 'plan9-for-vimspace/acme-colors' }
+    use { 'YorickPeterse/vim-paper' }
 end)
