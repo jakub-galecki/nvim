@@ -35,7 +35,6 @@ return require('packer').startup(function(use)
         'mbbill/undotree'
     }
 
-<<<<<<< Updated upstream
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -49,67 +48,6 @@ return require('packer').startup(function(use)
             end,
         },
         {'williamboman/mason-lspconfig.nvim'}, -- Optional
-=======
-  use {
-      'VonHeikemen/lsp-zero.nvim',
-      branch = 'v2.x',
-      requires = {
-          -- LSP Support
-          {'neovim/nvim-lspconfig'},             -- Required
-          {                                      -- Optional
-          'williamboman/mason.nvim',
-          run = function()
-              pcall(vim.cmd, 'MasonUpdate')
-          end,
-      },
-      {'williamboman/mason-lspconfig.nvim'}, -- Optional
-
-      -- Autocompletion
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
-  }
-  }
-
-  use {
-      'numToStr/Comment.nvim',
-      config = function()
-          require('Comment').setup()
-      end
-  }
-    
-  use { 'tpope/vim-fugitive' }
-    
-  use { 'embark-theme/vim', as = 'embark' }
-
-  use { 'navarasu/onedark.nvim'}
-
-  use { 'sainnhe/gruvbox-material' }
-
-  use { 'luisiacc/gruvbox-baby' }
-
-  use { 'airblade/vim-gitgutter' }
-
-  use { 'folke/tokyonight.nvim' }
-
-  use { 'APZelos/blamer.nvim' }
-
-  use { 'marko-cerovac/material.nvim' }
-
-  use { 'BurntSushi/ripgrep' }
-
-  use { 'rebelot/kanagawa.nvim' } 
-
-  use { 'lervag/vimtex' }
-
-   use({
-       "iamcco/markdown-preview.nvim",
-       run = function() vim.fn["mkdp#util#install"]() end,
-   })
-
-   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
->>>>>>> Stashed changes
-
         -- Autocompletion
         {'hrsh7th/nvim-cmp'},     -- Required
         {'hrsh7th/cmp-nvim-lsp'}, -- Required
@@ -117,7 +55,6 @@ return require('packer').startup(function(use)
     }
     }
 
-<<<<<<< Updated upstream
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -150,7 +87,7 @@ return require('packer').startup(function(use)
     use { 'jaredgorski/Mies.vim' }
     use { 'plan9-for-vimspace/acme-colors' }
     use { 'YorickPeterse/vim-paper' }
-=======
+
    use { 'dasupradyumna/midnight.nvim' }
 
    use { 'EdenEast/nightfox.nvim' }
@@ -170,5 +107,5 @@ return require('packer').startup(function(use)
    use { "folke/tokyonight.nvim" }
     
    use { "nvim-tree/nvim-tree.lua" }
->>>>>>> Stashed changes
+
 end)

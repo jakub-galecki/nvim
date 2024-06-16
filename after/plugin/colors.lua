@@ -13,11 +13,6 @@ function ColorMyPencils(color)
         terminalColors = true,       -- define vim.g.terminal_color_{0,17}
         theme = "wave",              -- Load "wave" theme when 'background' option is not set
     }
-<<<<<<< Updated upstream
-    color = color or "alabaster"
-    vim.cmd.colorscheme(color)
-end
-=======
 
     require("tokyonight").setup({
          transparent = true,
@@ -35,7 +30,6 @@ end
     color = color or "catppuccin"
     vim.cmd.colorscheme(color)
 end	
->>>>>>> Stashed changes
 
 ColorMyPencils()
 
