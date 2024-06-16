@@ -13,9 +13,29 @@ function ColorMyPencils(color)
         terminalColors = true,       -- define vim.g.terminal_color_{0,17}
         theme = "wave",              -- Load "wave" theme when 'background' option is not set
     }
+<<<<<<< Updated upstream
     color = color or "alabaster"
     vim.cmd.colorscheme(color)
 end
+=======
+
+    require("tokyonight").setup({
+         transparent = true,
+         day_brightness = 0.2
+    })
+    require("catppuccin").setup({
+        flavour = "auto", -- latte, frappe, macchiato, mocha
+        background = { -- :h background
+            light = "latte",
+            dark = "mocha",
+        },
+        transparent_background = true,
+    })
+    vim.g.gruvbox_baby_function_style = "NONE"
+    color = color or "catppuccin"
+    vim.cmd.colorscheme(color)
+end	
+>>>>>>> Stashed changes
 
 ColorMyPencils()
 
