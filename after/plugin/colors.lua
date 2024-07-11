@@ -18,19 +18,40 @@ function ColorMyPencils(color)
          transparent = true,
          day_brightness = 0.2
     })
+
     require("catppuccin").setup({
         flavour = "auto", -- latte, frappe, macchiato, mocha
         background = { -- :h background
-            light = "latte",
-            dark = "mocha",
+            light = "macchiato",
+            dark = "frappe",
         },
         transparent_background = true,
     })
-    vim.g.gruvbox_baby_function_style = "NONE"
-    color = color or "catppuccin"
+
+    require('material').setup({
+        disable = {
+            background = true,
+        },
+    })
+
+    require('nightfox').setup({
+      options = {
+       transparent = true,
+      }
+    })
+
+    vim.g.everforest_transparent_background = 1
+    vim.g.everforest_background = 'medium'
+
+    vim.g.gruvbox_material_transparent_background = 1
+    vim.g.gruvbox_material_background = 'hard'
+
+    vim.g.gruvbox_transparent_bg = 1
+    vim.g.gruvbox_contrast_dark = 'hard'
+    color = color or "nightfox"
     vim.cmd.colorscheme(color)
-end	
+end
 
 ColorMyPencils()
 
-vim.cmd[[ hi Normal guibg='#171717' ]]
+-- vim.cmd[[ hi Normal guibg='#171717' ]]

@@ -67,7 +67,6 @@ return require('packer').startup(function(use)
     use { 'sainnhe/gruvbox-material' }
     use { 'airblade/vim-gitgutter' }
     use { 'APZelos/blamer.nvim' }
-    use { 'marko-cerovac/material.nvim' }
     use { 'BurntSushi/ripgrep' }
     use { 'rebelot/kanagawa.nvim' } 
     use { 'lervag/vimtex' }
@@ -107,5 +106,10 @@ return require('packer').startup(function(use)
    use { "folke/tokyonight.nvim" }
     
    use { "nvim-tree/nvim-tree.lua" }
+    
+   use { "marko-cerovac/material.nvim" }
 
+   use { "sainnhe/everforest" }
+
+   use { "morhetz/gruvbox" }
 end)
