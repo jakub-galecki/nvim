@@ -5,6 +5,7 @@ vim.keymap.set('n', '<C-g>', builtin.git_status, {})
 vim.keymap.set('n', '<leader>pg', builtin.live_grep, {})
 vim.keymap.set('n', '<C-b>', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fr', builtin.lsp_references, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, {})
 vim.keymap.set('n', '<leader>ps', function()
 	builtin.grep_string({search = vim.fn.input("Grep > ")});
 end)

@@ -10,16 +10,8 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.2',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
-
-    use({ 
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine-main')
-        end
-    })
 
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -40,19 +32,19 @@ return require('packer').startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            {'neovim/nvim-lspconfig'},             -- Required
-            {                                      -- Optional
-            'williamboman/mason.nvim',
-            run = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
-    }
+            { 'neovim/nvim-lspconfig' }, -- Required
+            {                            -- Optional
+                'williamboman/mason.nvim',
+                run = function()
+                    pcall(vim.cmd, 'MasonUpdate')
+                end,
+            },
+            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+            -- Autocompletion
+            { 'hrsh7th/nvim-cmp' },                  -- Required
+            { 'hrsh7th/cmp-nvim-lsp' },              -- Required
+            { 'L3MON4D3/LuaSnip' },                  -- Required
+        }
     }
 
     use {
@@ -62,54 +54,40 @@ return require('packer').startup(function(use)
         end
     }
     use { 'tpope/vim-fugitive' }
-    use { 'embark-theme/vim', as = 'embark' }
-    use { 'navarasu/onedark.nvim'}
     use { 'sainnhe/gruvbox-material' }
     use { 'airblade/vim-gitgutter' }
     use { 'APZelos/blamer.nvim' }
     use { 'BurntSushi/ripgrep' }
-    use { 'rebelot/kanagawa.nvim' } 
     use { 'lervag/vimtex' }
     use({
         "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
+        run = "cd app && npm install",
+        setup = function()
+            vim.g.mkdp_filetypes = {
+                "markdown" }
+        end,
+        ft = { "markdown" },
     })
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
     use { 'catppuccin/nvim' }
-    use {
-        "mcchrish/zenbones.nvim",
-        requires = "rktjmp/lush.nvim"
-    }
-    use {'nyoom-engineering/oxocarbon.nvim'}
-    use { 'kvrohit/rasmus.nvim' }
     use { 'p00f/alabaster.nvim' }
-    use { 'jaredgorski/Mies.vim' }
-    use { 'plan9-for-vimspace/acme-colors' }
-    use { 'YorickPeterse/vim-paper' }
 
-   use { 'dasupradyumna/midnight.nvim' }
-
-   use { 'EdenEast/nightfox.nvim' }
-
-   use { 'sainnhe/sonokai' }
-
-   use { 'savq/melange-nvim' }
-
-   use { 'srcery-colors/srcery-vim' }
-
-   use { 'Yazeed1s/minimal.nvim' }
-
-   use { 'Yazeed1s/oh-lucy.nvim' }
-    
-   use { "catppuccin/nvim", as = "catppuccin" }
-
-   use { "folke/tokyonight.nvim" }
-    
-   use { "nvim-tree/nvim-tree.lua" }
-    
-   use { "marko-cerovac/material.nvim" }
-
-   use { "sainnhe/everforest" }
-
-   use { "morhetz/gruvbox" }
+    use { "rose-pine/neovim" }
+    use {
+        "jesseleite/nvim-noirbuddy",
+        requires = { "tjdevries/colorbuddy.nvim" }
+    }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+    use { "morhetz/gruvbox" }
+    use { "EdenEast/nightfox.nvim" }
+    use { "deparr/tairiki.nvim" }
+    use { "armannikoyan/rusty.nvim" }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)
