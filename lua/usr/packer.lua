@@ -90,6 +90,7 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+<<<<<<< Updated upstream
 
     use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
     use {
@@ -97,4 +98,11 @@ return require('packer').startup(function(use)
         branch = "harpoon2",
         requires = { { "nvim-lua/plenary.nvim" } }
     }
+=======
+    use 'Olical/conjure'
+    use 'jiangmiao/auto-pairs'
+    use 'luochen1990/rainbow'
+    use 'HiPhish/rainbow-delimiters.nvim'
+    use 'wlangstroth/vim-racket'
+>>>>>>> Stashed changes
 end)

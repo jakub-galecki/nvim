@@ -20,7 +20,7 @@ function ColorMyPencils(color)
 --         transparent = true,
     }
     require('lualine').setup()
-    color = color or "nightfox"
+    color = color or "catppuccin-macchiato"
     vim.cmd.colorscheme(color)
 end
 
