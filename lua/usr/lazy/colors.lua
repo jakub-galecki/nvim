@@ -33,6 +33,12 @@ return {
         end
     },
     {
+        "p00f/alabaster.nvim"
+    },
+    {
+        "projekt0n/github-nvim-theme"
+    },
+    {
         "ellisonleao/gruvbox.nvim",
         name = "gruvbox",
         config = function()

@@ -29,5 +29,14 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.clipboard = 'unnamedplus'
 
+local space = "·"
+vim.opt.listchars:append {
+	tab = ">.",
+	multispace = space,
+	lead = space,
+	trail = space,
+	nbsp = space
+}
+vim.opt.list = true
 --- vim.opt.colorcolumn = "80"
 
