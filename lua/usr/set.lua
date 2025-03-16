@@ -37,6 +37,6 @@ vim.opt.listchars:append {
 	trail = space,
 	nbsp = space
 }
-vim.opt.list = true
+vim.opt.list = false
 --- vim.opt.colorcolumn = "80"
 
