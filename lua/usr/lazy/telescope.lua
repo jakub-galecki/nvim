@@ -17,6 +17,7 @@ return {
         vim.keymap.set('n', '<C-b>', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fr', builtin.lsp_references, { noremap = true, silent = true })
         vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, {})
+        vim.keymap.set('n', '<leader>ff', builtin.current_buffer_fuzzy_find, {})
         vim.keymap.set('n', '<leader>ps', function()
         builtin.grep_string({search = vim.fn.input("Grep > ")});
 end)
