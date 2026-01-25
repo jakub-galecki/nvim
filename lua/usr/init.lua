@@ -19,9 +19,19 @@ autocmd('LspAttach', {
         vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
         vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
         vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-        vim.keymap.set("n", "<c-f>", function() vim.lsp.buf.format() end, opts)
+        vim.keymap.set("n", "<c-f>", function()
+            if vim.bo.filetype == "mojo" then
+                local pos = vim.api.nvim_win_get_cursor(0)
+                local file = vim.api.nvim_buf_get_name(0)
+                vim.cmd("silent !mojo format -i " .. vim.fn.shellescape(file))
+                vim.cmd("edit!")
+                vim.api.nvim_win_set_cursor(0, pos)
+            else
+                vim.lsp.buf.format()
+            end
+        end, opts)
         vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
-        vim.keymap.set("v", "<c-f>", function() vim.lsp.buf.format() end, opts)      
+        vim.keymap.set("v", "<c-f>", function() vim.lsp.buf.format() end, opts)
     end
 })
 
